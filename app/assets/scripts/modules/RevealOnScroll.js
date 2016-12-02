@@ -5,15 +5,15 @@ class RevealOnScroll {
   constructor(els, offset) {
     this.itemsToReveal = els;
     this.offsetPercentage = offset;
-    this.hideInitally();
-    this.createWayPoints();
+    this.hideInitially();
+    this.createWaypoints();
   }
 
-  hideInitally() {
+  hideInitially() {
     this.itemsToReveal.addClass("reveal-item");
   }
 
-  createWayPoints() {
+  createWaypoints() {
     var that = this;
     this.itemsToReveal.each(function() {
       var currentItem = this;

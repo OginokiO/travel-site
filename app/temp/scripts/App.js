@@ -10380,18 +10380,18 @@
 
 	    this.itemsToReveal = els;
 	    this.offsetPercentage = offset;
-	    this.hideInitally();
-	    this.createWayPoints();
+	    this.hideInitially();
+	    this.createWaypoints();
 	  }
 
 	  _createClass(RevealOnScroll, [{
-	    key: "hideInitally",
-	    value: function hideInitally() {
+	    key: "hideInitially",
+	    value: function hideInitially() {
 	      this.itemsToReveal.addClass("reveal-item");
 	    }
 	  }, {
-	    key: "createWayPoints",
-	    value: function createWayPoints() {
+	    key: "createWaypoints",
+	    value: function createWaypoints() {
 	      var that = this;
 	      this.itemsToReveal.each(function () {
 	        var currentItem = this;
@@ -11220,7 +11220,7 @@
 	  _createClass(StickyHeader, [{
 	    key: "refreshWaypoints",
 	    value: function refreshWaypoints() {
-	      this.lazyImages.load(function () {
+	      this.lazyImages.on("load", function () {
 	        Waypoint.refreshAll();
 	      });
 	    }
